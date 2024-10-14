@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="x-apple-disable-message-reformatting">
-  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#000000">
   <meta name="supported-color-schemes" content="light dark">
+  <meta name="description" content="Modern HTML Email Template. The aim is to make a template with a focus on accessibility.">
   <title>Fashion Pulse</title>
   <!--[if gte mso 9]>
   <xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
@@ -18,6 +20,7 @@
   <style>
   table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;}
   table {border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto !important;}
+  p {line-height: 120% !important;}
   a {text-decoration: none;}
  .mso_fs24 {font-size: 18pt !important;}
  .mso_fs20 {font-size: 15pt !important;}
@@ -25,6 +28,7 @@
  .mso_fs14 {font-size: 10.5pt !important;}
   </style>
   <![endif]-->
+  <!--[if !mso]><!-->
   <style>
   @font-face {font-family: 'Merriweather Regular';font-style: normal;font-weight: normal;mso-font-alt: Lucida Bright;src: local('Merriweather Regular'), url('assets/fonts/Merriweather-Regular.woff') format('woff');}
   @font-face {font-family: 'Merriweather Italic';font-style: normal;font-weight: normal;mso-font-alt: Lucida Bright;src: local('Merriweather Italic'), url('assets/fonts/Merriweather-Italic.woff') format('woff');}
@@ -35,124 +39,109 @@
   @font-face {font-family: 'Merriweather Black';font-style: normal;font-weight: normal;src: local('Merriweather Black'), url('assets/fonts/Merriweather-Black.woff') format('woff');}
   @font-face {font-family: 'Merriweather Black Italic';font-style: normal;font-weight: normal;src: local('Merriweather Black Italic'), url('assets/fonts/Merriweather-BlackItalic.woff') format('woff');}
   </style>
+  <!--<![endif]-->
   <style>
   /* Reset Styels */
   :root{ color-scheme: dark light;}
-  html, body{ margin: 0 auto !important; padding: 0 !important; height: 100% !important; width: 100% !important;} body{ font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif;}
+  html, body{ margin: 0 auto !important; padding: 0 !important; height: 100% !important; width: 100% !important;}
+  body{ font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif;}
   div{ font-size: 16px !important;}
   #converted-body .ol-mac-height400px{ min-height: 25em !important; height: 25em !important;}
+  .text-center {text-align: center !important}
  </style>
   <style>
   /* Dark Mode Styles */
   @media (prefers-color-scheme: dark) {
   body{ color: #fffffe; background-color: #121212;}
   .dm_container{ background-color: #000001 !important;}
-  .dm_header-bg { background-color: #fffffe !important;}
+  .dm_bg_blk { background-color: #000001 !important; color: #fffffe !important;}
   .dm_h-nav-links { color: #ffd381 !important;}
+  details ~ .toggle_icon {background: url(https://i.ibb.co/3fN0cXN/icons8-menu-100.png) !important; background-size: cover !important}
+  details[open] ~ .toggle_icon {background: url(https://i.ibb.co/TcsbN4d/icons8-close-100.png) !important; background-size: cover !important;}
   }
  </style>
   <style>
    @media screen and (max-width:600px) {
   .box-sizing{box-sizing: border-box !important}
-  .hide{display: none !important}
+  .hide {display: none !important}
   .wrap{display: block !important; width: 100% !important;max-width: 100% !important}
   .width100pc{width: 100% !important;max-width: 100% !important;margin: 0 auto !important}
   .padt20 {padding-top: 1.25em !important}
   .padb20 {padding-bottom: 1.25em !important}
   .margLR30 {margin-left: 1.25em !important; margin-right: 1.25em !important}
+  .fs20 {font-size: 1.25em !important}
   /*Faux Text Over Image Styles */
-  .mso-fauxAbsolute__img{display:none !important}
-  .mso-fauxAbsolute__txt{max-width: 100% !important; width: 100% !important;background-image: url('https://i.ibb.co/xM5Wfjx/fp-hero.jpg');background-repeat: no-repeat !important;background-size: cover !important; background-position: top center; height: 600px !important; padding: 17% 24px !important; margin: unset !important;}
-  .mbl_img_container{height: 37.5em !important; max-height: 37.5em !important}
-  .mbl_faux_container{ background-size: cover !important; background-position: center !important; padding: 45% 24px !important}
-  .mso-fauxAbsolute__txt h2{margin-top: 20px !important}
+  .mso-fauxAbsolute__bg{max-width: 100% !important; width: 100% !important; min-height: 600px !important; background-image: url(https://i.ibb.co/XZMDd2d/fp-hero2.jpg); background-repeat: no-repeat !important;background-size: cover !important; background-position: center; padding: 40% 1em !important; height: unset !important; margin: unset !important;}
+  .mso-fauxAbsolute__bg h2 {font-size: 2em; margin-bottom: 10px;}
+  .mso-fauxAbsolute__bg p {font-size: 1em; margin-bottom: 0px;}
   .mbl_max-width260{max-width: 100% !important; width: 260px !important; margin: 0 auto !important;padding-left: 0em !important;padding-right: 0em !important}
-  .p01_mobile{margin-top: 0 !important}
-  .p02_mobile{margin-right: 0!important; margin-top: 0 !important}
+   .p02_mobile {margin-right: unset !important}
   /* OL Mobile App 600px Height Fix */
-   #converted-body .ol-mac-height600px{ min-height: 37.5em !important; height: 37.5em !important;}
-   }
+   #converted-body .ol-mac-height600px{ min-height: 37.5em !important; }
+   #converted-body .ol-mac-height400px{ min-height: 25em !important; height: unset !important;} /*By unsetting the height, it fixes the accessibility issue*/
+   #converted-body .padReset {padding-left: 24px !important; padding-right: 24px !important;}
+   #converted-body .logo {margin: 0 auto !important; padding: 20px !important; background-color: transparent !important;}
   /* Accessible Mobile Nav Styles */
   .container{ position: relative; background-color: #ffffff;}
   .logo{ display: flex; align-items: center;}
   details.styled{ transition: all 0.4s ease-in-out; overflow: hidden; cursor: pointer; max-height: 120px;}
-  details[open].styled{ max-height: 500px;}
+  details[open].styled{ max-height: 1000px;}
   summary::-webkit-details-marker{ display: none;}
   summary{ display: flex; justify-content: space-between; list-style: none; z-index: 4; position: relative;}
-  details ~ .toggle_icon{ background: url(https://img.icons8.com/ios-filled/50/menu--v1.png); width: 36px; height:36px; background-size: contain; position: absolute; background-color: #fffffe !important; padding: 10px; border-radius: 10px; top: 0; right: 0; margin-right: 1.25rem; margin-top: 1.75rem}
-  details[open] ~ .toggle_icon{ background: url(https://img.icons8.com/ios-filled/50/delete-sign--v1.png); background-size: contain; width: 36px; height:36px; background-size: contain; position: absolute; top: 0; right: 0; margin-right: 1.25rem; margin-top: 1.75rem}
-  li a{ text-decoration: none;}
+  details ~ .toggle_icon{ background: url(https://img.icons8.com/ios-filled/50/menu--v1.png); width: 52px; height:52px; background-size: contain; position: absolute; top: 30px; right: 20px; }
+  details[open] ~ .toggle_icon{ background: url(https://img.icons8.com/ios-filled/50/delete-sign--v1.png); background-size: contain; width: 52px; height:52px; background-size: contain;}
+  li a { text-decoration: none;}}
  </style>
   <!--Start Collapsed Mobile Nav Bar & Menu Styles-->
-  <style>
-  @media screen and (max-width:600px) {
-    u + .body .gmail-hide{ display: none !important;}
-    u + .body .gmail-center{ margin: 0 auto !important;}
-  }
-</style>
-  <style>
-  @media screen and (max-width:600px) {
-    .outlook-hide\0 { background-color: #ffffff !important; display: none !important;}
-    .logo\0 {justify-content: center !important}
-    .mso-fauxAbsolute__txt\0 {background: url(https://img.icons8.com/ios-filled/50/menu--v1.png); }
-  }
-</style>
-  <style>
-  @media screen and (max-width:600px) {
-    #MessageViewBody .samsung-menu-fix { display: none !important; }
-    div#mail-message-header { height: 120px !important; }
-    #MessageViewBody  summary { padding-right: unset !important }
-    #MessageViewBody  .logo { margin: 0 auto !important }
-  }
-</style>
+<style> @media screen and (max-width:600px) {u + .body .gmail-hide{ display: none !important;}u + .body .gmail-center{ margin: 0 auto !important; padding: 20px !important; background: transparent !important;}}</style><style>@media screen and (max-width:600px) {.outlook-hide\0 { background-color: #ffffff !important; display: none !important;}}</style><style>@media screen and (max-width:600px) {#MessageViewBody .samsung-menu-fix { display: none !important; }div#mail-message-header { height: 120px !important; }#MessageViewBody  summary { padding-right: unset !important; justify-content: center !important; align-items: center !important; }#MessageViewBody  .logo { margin: 0 auto !important;}}</style>
   <!--End Collapsed Mobile Nav Bar & Menu Styles-->
 </head>
 
-<body class="body" lang="en" dir="ltr" style="margin: 0 auto !important; padding: 0 !important;background-color: #999999; font-size: 16px;">
-  <div style="font-size:1rem;max-width:600px;margin:0 auto;text-align:center;padding:0;" lang="en" dir="ltr" class="dm_container">
+<body class="body" lang="en" dir="ltr" style="margin: 0 auto !important; padding: 0 !important;background-color: #999999; font-size: 16px">
+  <div style="font-size:1rem;max-width:600px;margin:0 auto; padding:0;" class="text-center">
     <!--Preheader Text-->
-    <div style="display:none;max-height:0;overflow:hidden">Grand Opening - Fashion Pulse &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj; </div>
-    <div role="banner" aria-label="email header" class="dm_header-bg">
-      <!--[if (gte mso 16)|(IE)]>
-      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" role="presentation" style="background-color: #ffffff; padding: 1.25em 0 0;">
+    <div style="display:none;max-height:0;overflow:hidden">pre header&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj; </div>
+    <div role="banner" aria-label="email header" style="background-color: #ffffff;" class="dm_bg_blk">
+      <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" role="none" style="background-color: #ffffff; padding: 1.25em 0 0;">
       <tr>
       <td align="center">
       <![endif]-->
       <!--H1-->
-      <div style="background-color: #ffffff;" class="dm_container">
+      <div>
         <!--Desktop Header-->
         <div style="padding: 1.25em 0 0;" class="hide">
-          <div style="max-height: 180px">
-            <a href="https://emailresourc.es/" style="display: inline-block; max-height: 180px; text-decoration: none;"><img src="https://i.ibb.co/zx8XxKV/fp-logo.png" width="200" alt="website name home" style="display: block; line-height: 1.4; background:transparent; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px; text-align: left" /></a>
-          </div>
+          <h1 style="margin:  0;">
+            <a href="https://google.com" style="display: inline-block;  text-decoration: none;"><img src="https://i.ibb.co/fpmtrJX/fp-logo-2.png" width="150" alt="Fashion Pulse. Home." style="display: block; line-height: 1.4; background:transparent; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .875em; font-weight: 400; text-align: left" /></a>
+          </h1>
           <div role="navigation" aria-label="email site">
             <!--[if (gte mso 9)|(IE)]>
-          <table align="center" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" width="600" role="none">
-          <tr>
-          <td align="center" style="padding: 20px 0">
-          <table align="center" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" width="378" role="none">
-          <tr>
-          <td align="center">
-          <![endif]-->
-            <div role="list" style="display: inline-block; padding: 1.25em 0; margin: 0; list-style-type: none; width: 85%;">
+            <table align="center" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" width="600" role="none">
+              <tr>
+                <td align="center" style="padding: 20px 0">
+                  <table align="center" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" width="378" role="none">
+                    <tr>
+                      <td align="center">
+                        <![endif]-->
+            <div role="list" style="display: inline-block; padding: 1.25em 0; margin: 0 auto; list-style-type: none; width: 85%;">
               <div role="listitem" style="display: inline-block; width: 15%;">
-                <a href="https://google.com" style="text-decoration: underline; color: #001259;" class="dm_h-nav-links">Men</a>
+                <a href="https://google.com" class="dm_h-nav-links" style="font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.1; font-weight: 400; text-decoration: underline; color: #001259;">Men</a>
               </div>
               <!--[if (gte mso 9)|(IE)]></td><td align="center"><![endif]-->
               <div role="listitem" style="display: inline-block; width: 15%;">
-                <a href="https://google.com" style="text-decoration: underline; color: #001259;" class="dm_h-nav-links">Women</a>
+                <a href="https://google.com" class="dm_h-nav-links" style="font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.1; font-weight: 400; text-decoration: underline; color: #001259;">Women</a>
               </div>
               <!--[if (gte mso 9)|(IE)]></td><td align="center"><![endif]-->
               <div role="listitem" style="display: inline-block; width: 15%;">
-                <a href="https://google.com" style="text-decoration: underline; color: #001259;" class="dm_h-nav-links">Children</a>
+                <a href="https://google.com" class="dm_h-nav-links" style="font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.1; font-weight: 400; text-decoration: underline; color: #001259;">Kids</a>
               </div>
               <!--[if (gte mso 9)|(IE)]></td><td align="center"><![endif]-->
               <div role="listitem" style="display: inline-block; width: 15%;">
-                <a href="https://google.com" style="text-decoration: underline; color: #001259;" class="dm_h-nav-links">Clothes</a>
+                <a href="https://google.com" class="dm_h-nav-links" style="font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.1; font-weight: 400; text-decoration: underline; color: #001259;">Clothes</a>
               </div>
               <!--[if (gte mso 9)|(IE)]></td><td align="center"><![endif]-->
               <div role="listitem" style="display: inline-block; width: 15%;">
-                <a href="https://google.com" style="text-decoration: underline; color: #001259;" class="dm_h-nav-links">Belts</a>
+                <a href="https://google.com" class="dm_h-nav-links" style="font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.1; font-weight: 400; text-decoration: underline; color: #001259;">Belts</a>
               </div>
             </div>
             <!--[if (gte mso 9)|(IE)]>
@@ -167,47 +156,48 @@
         </div>
         <!--[if !mso]><!-->
         <!--Mobile Header-->
-        <div class="container wrap box-sizing dm_header-bg" style="display: none; width: 100%; min-width: 100%;">
+        <div class="container wrap box-sizing dm_bg_blk" style="display: none; width: 100%; min-width: 100%; background-color: #ffffff">
           <details class="styled" style="width: 100%; min-width: 100%">
             <summary style="height: 120px">
-              <a href="" style="display: inline-block; padding: 20px; max-height: 80px; text-decoration: none;" class=" logo gmail-center samsung-center"> <img width="120" src="https://i.ibb.co/zx8XxKV/fp-logo.png" alt="website name home" style="display: block; line-height: 1.4; background:transparent; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px;"> </a>
+              <h1 style="margin: 0;">
+                <img width="125" class="gmail-center logo" src="https://i.ibb.co/fpmtrJX/fp-logo-2.png" alt="website name home" style="display: block; line-height: 1.4; background:transparent; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; margin: 20px;">
+              </h1>
             </summary>
-            <nav aria-label="site email">
+            <div role="navigation" varia-label="site email">
               <ul role="list" style="list-style-type: none; margin: 0; padding: 0;" class="gmail-hide outlook-hide">
-                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-size: 1.25em"><a href="" style="display: inline-block; color: #ffd381;" class="center">Men</a></li>
-                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-size: 1.25em"><a href="" style="display: inline-block; color: #ffd381;" class="center">Women</a></li>
-                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-size: 1.25em"><a href="" style="display: inline-block; color: #ffd381;" class="center">Children</a></li>
-                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-size: 1.25em"><a href="" style="display: inline-block; color: #ffd381;" class="center">Clothes</a></li>
-                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-size: 1.25em"><a href="" style="display: inline-block; color: #ffd381;" class="center">Belts</a></li>
+                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.1; font-weight: 400;"><a href="" style="display: inline-block; color: #ffd381;" class="center">Men</a></li>
+                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.1; font-weight: 400;"><a href="" style="display: inline-block; color: #ffd381;" class="center">Women</a></li>
+                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.1; font-weight: 400;"><a href="" style="display: inline-block; color: #ffd381;" class="center">Kids</a></li>
+                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.1; font-weight: 400;"><a href="" style="display: inline-block; color: #ffd381;" class="center">Clothes</a></li>
+                <li role="listitem" style="background-color: #001259; display: flex; border-bottom: 1px solid white; justify-content: center; padding: 1em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.1; font-weight: 400;"><a href="" style="display: inline-block; color: #ffd381;" class="center">Belts</a></li>
               </ul>
-            </nav>
+            </div>
           </details>
           <div class="toggle_icon gmail-hide outlook-hide samsung-menu-fix" aria-hidden="true"></div>
         </div>
       </div>
       <!--/H1-->
       <!--<![endif]-->
-      <!--[if (gte mso 16)|(IE)]>
+      <!--[if (gte mso 9)|(IE)]>
           </td>
         </tr>
       </table>
       <![endif]-->
     </div>
-    <div role="region" aria-labelledby="main_email_content">
-      <h1 id="main_email_content" style="margin: 0; font-size: 0; line-height: 0; height:0px; width:0px; overflow: hidden; text-indent: -9999px;">Email Content</h1>
+    <div role="main" aria-label="company name">
       <!--Ctr Align Live Text | Over Img-->
       <div style="" class="ol-mac-height400px ol-mac-height600px">
-        <span style="mso-element-wrap:none;mso-element-left:center;font-size:0;"></span>
-        <div style="max-height:0px;mso-element-wrap:no-wrap-beside;mso-element-left:center;">
-          <img class="mso-fauxAbsolute__img" src="https://i.ibb.co/xM5Wfjx/fp-hero.jpg" alt="fp-hero" width="600" border="0" style="width:100%;max-width:600px;display:block;border:0;margin:0 auto;">
+        <span class="hide" style="mso-element-wrap:none;mso-element-left:center;font-size:0;"></span>
+        <div class="hide" style="max-height:0px;mso-element-wrap:no-wrap-beside;mso-element-left:center;">
+          <img src="https://i.ibb.co/XZMDd2d/fp-hero2.jpg" alt="" width="600" border="0" style=" width:100%;max-width:600px;display:block;border:0;margin:0 auto;">
         </div>
-        <div class="mso-fauxAbsolute__txt box-sizing" style="height:200px; margin:100px auto; mso-element-frame-width:400px; max-width:400px; width:400px; mso-element-wrap:no-wrap-beside; mso-element-left:center; font-family: Arial,sans-serif;font-size:16px;mso-line-height-rule-alt:150%; color: #000000; text-align: center; background: url('https://i.ibb.co/xM5Wfjx/fp-hero.jpg'); background-repeat: no-repeat !important;background-size: cover !important; background-position: top center;">
-          <h2 style="margin:0 0 14px; color: #ffffff; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1.125em; line-height: 1.2" class="mso_fs18">Discover Your Fall Collection</h2>
-          <p style="margin:0 0 14px; color: #ffffff; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">Step into the season with the latest trends for men, women, and kids. From cozy layers to statement pieces, explore everything you need to refresh your wardrobe. Limited-time offers. </p>
-          <div style="">
-            <a href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">
+        <div class="box-sizing mso-fauxAbsolute__bg text-center" style="height: 350px; margin:45px auto 5px; mso-element-frame-width:400px; max-width:400px; width:400px; mso-element-wrap:no-wrap-beside; mso-element-left:center; font-family: Arial,sans-serif;font-size:16px;mso-line-height-rule-alt:150%; line-height: 1.5; background: url('https://i.ibb.co/XZMDd2d/fp-hero2.jpg'); background-repeat: no-repeat !important;background-size: cover !important; background-position: top center;">
+          <h2 style="margin:0 0 20px; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.875em; line-height: 1.1; font-weight: 600; color: #ffd381;">Step Into Style</h2>
+          <p style="margin:0 0 20px; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.5; font-weight: 400; color: #001259;">Discover the latest trends in fashion with our new arrivals. Elevate your style with bold designs and statement pieces, perfect for any occasion. Shop now to experience the best in modern fashion, available for a limited time.</p>
+          <div class="box-sizing">
+            <a class="padReset" href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.3; font-weight: 400;">
               <!--[if mso]><i style="mso-font-width:200%;mso-text-raise:150%" hidden>&#8195;
-              </i><span style="mso-text-raise:75%;"><![endif]-->Check it out<!--[if mso]>
+              </i><span style="mso-text-raise:75%;"><![endif]-->Elevate Your Look<!--[if mso]>
               </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
             </a>
           </div>
@@ -216,8 +206,8 @@
       <!--H2 Heading | Divider-->
       <table align="center" role="none" border="0" cellspacing="0" cellpadding="0" width="600px" style="width:600px; background-color: #ffffff; min-width: 100%;" class="width100pc dm_container">
         <tr>
-          <td style="padding: 0;">
-            <h2 style="margin:1.24em 0 0; text-align: center; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1.24em; line-height: 1.2" class="mso_fs24">Men's Suit Collection</h2>
+          <td style="padding-top: 2em">
+            <h2 style="margin: 0; text-align: center; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1.24em; line-height: 1.2" class="mso_fs24">Men's Suit Collection</h2>
             <table role="none" border="0" cellspacing="0" cellpadding="0" align="center" width="125" style="width: 125px;">
               <tr>
                 <td style="padding: 0">
@@ -230,24 +220,24 @@
       </table>
       <!--/H2 Heading-->
       <!--2 Up Product Card-->
-      <div style="display: flex; background-color: #ffffff;" class="wrap dm_container">
+      <div style="display: flex; background-color: #ffffff;" class="wrap dm_bg_blk">
         <!--[true]>
         <table align="center" role="none" border="0" cellspacing="0" cellpadding="0" width="600px" style="background-color: #ffffff;">
         <tr valign="top">
         <td width="260" align="center" style="padding: 2em 1.25em 1em">
         <![endif]-->
-        <div style="width: 260px; padding: 2em 20px 1em;" class=" mbl_max-width260">
-          <div style="width: 100%; margin: 0 auto; text-align: center;">
+        <div style="width: 260px; padding: 2em 20px 1em;" class="wrap mbl_max-width260">
+          <div style="width: 100%; margin: 0 auto;" class="text-center">
             <a href="https://emailresourc.es/" style="text-decoration: none;">
-              <img src="https://i.ibb.co/v3pMTN0/fp-mens-clothing2.jpg" width="260" height="260" alt="product image" style="width: 260px; height: 260px; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px; text-align: left;">
+              <img src="https://i.ibb.co/v3pMTN0/fp-mens-clothing2.jpg" width="260" height="260" alt="product image" style="width: 100%; height: auto; display: block; line-height: 1.3; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
             </a>
-            <h2 style="font-size: 1em; margin: .5em 0; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs18">Modern Fit Charcoal Suit</h2>
-            <p style="font-size: 1em; margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.3" class="mso_fs16">Tailored to perfection, modern fit for any occasion.</p>
+            <h2 style="margin: .5em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.3; font-weight: 600;">Modern Fit Charcoal Suit</h2>
+            <p style="margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">Tailored to perfection, modern fit for any occasion.</p>
             <div style="margin-bottom: .8em;">
-              <a href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">
+              <a class="padReset fs20" href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">
                 <!--[if mso]><i style="mso-font-width:200%;mso-text-raise:150%" hidden>&#8195;
-                    </i><span style="mso-text-raise:75%;"><![endif]-->View More Suits<!--[if mso]>
-                    </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
+                </i><span style="mso-text-raise:75%;"><![endif]-->View More Suits<!--[if mso]>
+                </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
               </a>
             </div>
           </div>
@@ -256,15 +246,15 @@
         </td>
         <td width="260" align="center" style="padding: 2em 1.25em 1em">
         <![endif]-->
-        <div style="width: 260px; padding: 2em 20px 1em;" class=" mbl_max-width260">
-          <div style="width: 100%; margin: 0 auto; text-align: center;">
-            <a href="https://emailresourc.es/" alt="fp-mens-clothing3" style="text-decoration: none;">
-              <img src="https://i.ibb.co/BTTQmQY/fp-mens-clothing3.jpg" width="260" height="260" alt="product image" style="width: 100%; height: auto; display: block;  line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px; text-align: left">
+        <div style="width: 260px; padding: 2em 20px 1em;" class="wrap mbl_max-width260">
+          <div style="width: 100%; margin: 0 auto;" class="text-center">
+            <a href="https://emailresourc.es/" style="text-decoration: none;">
+              <img src="https://i.ibb.co/BTTQmQY/fp-mens-clothing3.jpg" width="260" height="260" alt="product image" style="width: 100%; height: auto; display: block;  line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left">
             </a>
-            <h2 style="font-size: 1em; margin: .5em 0; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs18">Chocolate Slim Fit Suit</h2>
-            <p style="margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">A versatile chocolate suit, perfect for any event.</p>
+            <h2 style="margin: .5em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1.25em; line-height: 1.3; font-weight: 600;">Chocolate Slim Fit Suit</h2>
+            <p style="margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">A versatile chocolate suit, perfect for any event.</p>
             <div style="margin-bottom: .8em;">
-              <a href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">
+              <a class="padReset fs20" href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">
                 <!--[if mso]><i style="mso-font-width:200%;mso-text-raise:150%" hidden>&#8195;
                 </i><span style="mso-text-raise:75%;"><![endif]-->View More Suits<!--[if mso]>
                 </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
@@ -290,37 +280,41 @@
                 </td>
               </tr>
             </table>
-            <div style="line-height: 30px; max-height: 30px;">&nbsp;</div>
+            <div style="line-height: 30px; max-height: 30px;" class="hide">&nbsp;</div>
           </td>
         </tr>
       </table>
       <!--/H2 Heading-->
       <!--Content left | Image Right-->
-      <div style="display: flex; background-color: #ffffff;" class="wrap dm_container">
+      <div style="display: flex; background-color: #ffffff;" class="wrap dm_bg_blk">
         <!--[true]>
         <table align="center" role="none" border="0" cellspacing="0" cellpadding="0" width="600" style="background-color: #ffffff;">
         <tr>
-        <td width="50%" style="padding: 0 1.125em">
+        <td width="260" style="width: 260px; padding: 0 1.25em;">
         <![endif]-->
-        <div style="width:47%; height: 100%; margin: auto;padding-left: 1.125em; text-align: left" class="width100pc box-sizing padt20">
-          <h2 style="margin: .5em 0 0; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2; mso-line-height-rule: exactly;" class="mso_fs16">Get Ready for Winter</h2>
-          <p style="margin:.5em 0 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2; mso-line-height-rule: exactly;" class="mso_fs14">Find the perfect outerwear for those chilly days ahead.</p>
-          <div style="margin-bottom: .8em;">
-            <a href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">
+        <div style="width:260px; padding: 2.5em 1.25em; text-align: left" class="width100pc box-sizing">
+          <h2 style="margin: 0 0 1em; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.3; font-weight: 600;">Get Ready for Winter</h2>
+          <p style="margin:0 0 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9375em; line-height: 1.4; font-weight: 400;">Find the perfect outerwear for those chilly days ahead.</p>
+          <div style="margin-bottom: 1em;">
+            <a class="padReset fs20" href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">
               <!--[if mso]><i style="mso-font-width:200%;mso-text-raise:150%" hidden>&#8195;
               </i><span style="mso-text-raise:75%;"><![endif]-->See Trends<!--[if mso]>
               </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
             </a>
           </div>
-          <p style="margin-bottom: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2; mso-line-height-rule: exactly;" class="padb20" class="mso_fs14">Exclusions apply | Ends 10/05/24</p>
+          <p style="margin: 0; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .875em; line-height: 1.4; font-weight: 400;">Exclusions apply | Ends 10/05/24</p>
         </div>
         <!--[true]>
         </td>
-        <td width="50%" style="">
+        <td align="right" width="260" style="width: 260px;">
         <![endif]-->
-        <div style="width: 50%;" class="width100pc">
-          <a href="https://emailresourc.es/" style="text-decoration: none"><img src="https://i.ibb.co/NVTDPMp/fp-womens-clothing2.jpg" width="300" alt="right image" style="width:100%; height:auto; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px; text-align: left;">
+        <div style="width: 300px;" class="width100pc">
+          <a class="hide" href="https://emailresourc.es/" style="text-decoration: none"><img src="https://i.ibb.co/XDnVL3D/fp-womens-clothing2-DT.jpg" width="300" alt="right image" style="width:100%;  display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
           </a>
+          <!--[if !mso]><!-->
+          <a class="wrap" href="https://emailresourc.es/" style="text-decoration: none; display: none;"><img class="wrap" src="https://i.ibb.co/cvNZmf6/fp-womens-clothing2-MO.jpg" width="300" alt="right image" style="width:100%;  display: none; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
+          </a>
+          <!--<![endif]-->
         </div>
         <!--[true]>
         </tr>
@@ -328,34 +322,34 @@
         <![endif]-->
       </div>
       <!--Content right | Image Left-->
-      <div style="display: flex; background-color: #ffffff;" class="wrap dm_container">
+      <div style="display: flex; background-color: #ffffff;" class="wrap dm_bg_blk">
         <!--[true]>
         <table align="center" role="none" border="0" cellspacing="0" cellpadding="0" width="600" style="background-color: #ffffff;">
         <tr>
-        <td width="50%">
+        <td width="260" style="width: 260px;">
         <![endif]-->
-        <div style="width: 50%;" class=" hide">
-          <a href=""><img src="https://i.ibb.co/WfPQ22V/fp-womens-clothing3.jpg" alt="left image" width="300" style="width:100%; height:auto; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 16px; text-align: left;">
+        <div style="width: 300px;">
+          <a href="" class="hide"><img src="https://i.ibb.co/B2LVXj5/fp-womens-clothing3-DT.jpg" alt="left image" width="300" height="300" style="width:100%; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
           </a>
         </div>
         <!--[true]>
         </td>
-        <td width="50%" style="padding: 0 1.125em">
+        <td width="260" style="width: 260px; padding-right: 20px">
         <![endif]-->
-        <div style="width:47%; padding: .25em 0 0  1.125em; text-align: left" class="width100pc box-sizing padt20">
-          <h2 style="margin: .5em 0; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">Exclusive Member Discounts</h2>
-          <p style="margin:.5em 0 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2" class="mso_fs14">Sign up today and enjoy up to 30% off on select items!</p>
+        <div style="width:260px; padding: 2em 1.25em; text-align: left" class="width100pc box-sizing">
+          <h2 style="margin: .5em 0; font-family: 'Merriweather Bold', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.3; font-weight: 600;">Exclusive Member Discounts</h2>
+          <p style="margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9375em; line-height: 1.4; font-weight: 400;">Sign up today and enjoy up to 30% off on select items!</p>
           <div style="margin-bottom: .8em;">
-            <a href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.2" class="mso_fs16">
+            <a class="padReset fs20" href="https://emailresourc.es/" style="background-color:#001259; text-decoration: none; padding: .75em 2em; color: #ffd381; display:inline-block; border-radius:20px; mso-padding-alt:0;text-underline-color:#001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; line-height: 1.4; font-weight: 400;">
               <!--[if mso]><i style="mso-font-width:200%;mso-text-raise:150%" hidden>&#8195;
-              </i><span style="mso-text-raise:75%;"><![endif]-->Shop Now<!--[if mso]>
+              </i><span style="mso-text-raise:75%;"><![endif]-->Sign Up Today<!--[if mso]>
               </span><i style="mso-font-width:200%;" hidden>&#8195;&#8203;</i><![endif]-->
             </a>
           </div>
-          <p style="margin-bottom: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2" class="padb20 mso_fs14">Exclusions apply | Ends 10/20/24</p>
+          <p style="margin-bottom: 1em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .875em; line-height: 1.4; font-weight: 400;">Exclusions apply | Ends 12/31/24</p>
         </div>
-        <div style="width: 50%; display: none; mso-hide: all;" class="wrap">
-          <a href="https://emailresourc.es/" style="text-decoration: none"><img src="https://i.ibb.co/WfPQ22V/fp-womens-clothing3.jpg" width="300" height="250" alt="left image" style="width:100%; height:auto; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
+        <div style="width: 50%; display: none; mso-hide: all;" class=" wrap">
+          <a href="https://emailresourc.es/" style="text-decoration: none"><img src="https://i.ibb.co/phS63Y0/fp-womens-clothing3-MO.jpg" width="300" height="250" alt="left image" style="width:100%; height:auto; display: block; line-height: 1.4; background:#ffd381; color: #001259; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: 1em; text-align: left;">
           </a>
         </div>
         <!--[true]>
@@ -367,37 +361,37 @@
     <!--Footer Section-->
     <div role="contentinfo" aria-label="email footer">
       <!--F1-->
-      <div style=" width: 100%; margin: 0 auto; background-color:#001259; color: #ffd381; padding-bottom: 2em;" class="">
+      <div style=" width: 100%; margin: 0 auto; background-color:#001259; color: #ffd381; padding-bottom: 2em;">
         <!--[true]>
         <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" role="none" style="background-color:#001259; color:#ffd381;"><tr><td align="center" style="padding: 1em 0 2em;">
         <![endif]-->
         <div style="padding: 1em 0;">
-          <a href="#" style="text-decoration: underline; color: #ffd381; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2" class="mso_fs14">Follow Us</a>
+          <a href="#" style="text-decoration: underline; color: #ffd381; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .75em; line-height: 1.5; font-weight: 400;">Follow Us</a>
         </div>
         <!--[true]>
-        <table align="center" border="0" cellspacing="0" cellpadding="0"  role="none" width="250" style="width:250px;">
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" role="none" width="300">
         <tr>
         <td align="center" style="padding: 1em 0;"><![endif]-->
-        <a href="#" style="display: inline-block; margin: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2"><img src="https://i.ibb.co/8sgHxhH/facebook-50-ffd381.png" width="30" alt="facebook">
+        <a href="#" style="display: inline-block;"><img src="https://i.ibb.co/8sgHxhH/facebook-50-ffd381.png" width="30" alt="facebook">
         </a>
         <!--[true]></td><td align="center"><![endif]-->
-        <a href="#" style="display: inline-block; margin: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2"><img src="https://i.ibb.co/PYvxmGC/instagram-50-ffd381.png" width="30" alt="instagram">
+        <a href="#" style="display: inline-block;"><img src="https://i.ibb.co/PYvxmGC/instagram-50-ffd381.png" width="30" alt="instagram">
         </a>
         <!--[true]></td><td align="center"><![endif]-->
-        <a href="#" style="display: inline-block; margin: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2"><img src="https://i.ibb.co/JQKKkFc/pinterest-50-ffd381.png" width="30" alt="pinterest">
+        <a href="#" style="display: inline-block;"><img src="https://i.ibb.co/JQKKkFc/pinterest-50-ffd381.png" width="30" alt="pinterest">
         </a>
         <!--[true]></td><td align="center"><![endif]-->
-        <a href="#" style="display: inline-block; margin: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2"><img src="https://i.ibb.co/X24dRFT/twitterx-50-ffd381.png" width="30" alt="twitter">
+        <a href="#" style="display: inline-block;"><img src="https://i.ibb.co/X24dRFT/twitterx-50-ffd381.png" width="30" alt="twitter">
         </a>
         <!--[true]></td><td align="center"><![endif]-->
-        <a href="#" style="display: inline-block; margin: .5em; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.2"><img src="https://i.ibb.co/qkx956F/youtube-50-ffd381.png" width="30" alt="youtube">
+        <a href="#" style="display: inline-block;"><img src="https://i.ibb.co/qkx956F/youtube-50-ffd381.png" width="30" alt="youtube">
         </a>
         <!--[true]>
         </td>
         </tr>
         </table>
         <![endif]-->
-        <p style="margin: 10px 54px 8px;font-size: 12px; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .9em; line-height: 1.4" class="margLR30"> Lorem dat aut et qui ommolut unt, simpor aut et apelecum quiatiiscil ipiet a sum lam aut aut aut optaspe ribus, que volor . Berro la estern con nonsed ut aloe a dolorat iandis exerspient estern con.</p>
+        <p style="margin: 10px 60px 8px; font-family: 'Merriweather Regular', 'Lucida Bright', Georgia, serif; font-size: .75em; line-height: 1.5; font-weight: 400;"> Please note that prices and promotions may vary. Product availability is subject to change without notice. All terms and conditions apply. Return policies and discounts differ by location. Additional details can be found on our website.</p>
         <!--[true]></td></tr></table><![endif]-->
       </div>
     </div>
